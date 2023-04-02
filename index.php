@@ -1,3 +1,13 @@
+<!-- CONNEXION À LA BDD -->
+<?php
+    include("php-partials/connectionDB.php");
+?>
+
+<!-- RECUPERATION DES DONNÉES ENTRÉES -->
+<?php
+    include("recup/recupIndex.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +19,14 @@
     <title>Première solution</title>
 </head>
 <body>
-    <label id="appreciation" name="appreciation" for="">L'appréciation</label>
+    <?php
+        if(isset($message)){
+            echo $message;
+        }
+    ?>
     <h3 class="page-title">Veuillez choisir l'observation qui vous convient</h3>
-    <div class="emoji-box">
+    <form class="emoji-box" method="POST">
+        <input id="appreciation" name="appreciation" type="text" value="">
         <div class="emoji-box__items">
             <div class="emoji-box__item">
                 <img src="images/smiling-face-with-smiling-eyes2.png" alt="emoticon souriant avec les yeux souriants">
@@ -44,10 +59,15 @@
             </div>
         </div>
 
-        <input type="submit" class="emoji-box__submit" value="Envoyer">
-    </div>
+        <input type="submit" name="send" class="emoji-box__submit" value="Envoyer">
+    </form>
 
 
     <script src="js/index.js"></script>
 </body>
 </html>
+
+<!-- FERMETURE DE LA CONNEXION À LA BDD -->
+<?php
+    mysqli_close($connexion);
+?>

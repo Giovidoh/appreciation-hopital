@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 02 avr. 2023 à 11:14
+-- Généré le : dim. 02 avr. 2023 à 14:45
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `appreciation_hotel`
+-- Base de données : `appreciation_hopital`
 --
 
 -- --------------------------------------------------------
@@ -42,7 +42,13 @@ INSERT INTO `observation` (`NumObs`, `NoteObs`, `AppreciationObs`) VALUES
 (2, 18, 'Très-bien'),
 (3, 18, 'Très-bien'),
 (4, 10, 'Neutre'),
-(5, 10, 'Neutre');
+(5, 10, 'Neutre'),
+(6, 12, 'Neutre'),
+(7, 0, ''),
+(8, 12, 'Neutre'),
+(9, 0, ''),
+(10, 0, 'Neutre'),
+(11, 0, 'Assez-bien');
 
 --
 -- Index pour les tables déchargées
@@ -62,7 +68,7 @@ ALTER TABLE `observation`
 -- AUTO_INCREMENT pour la table `observation`
 --
 ALTER TABLE `observation`
-  MODIFY `NumObs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `NumObs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

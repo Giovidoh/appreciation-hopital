@@ -7,7 +7,7 @@ tableauAppreciations.forEach(appreciation => {
         const labelTag = this.querySelector("label");
 
         //L'affecter dans l'appréciation choisie
-        appreciationChoisie.innerHTML = labelTag.textContent;
+        appreciationChoisie.value = labelTag.textContent;
 
         //Appliquer le nouveau style de l'élément sélectionné
         //Enlever la classe active pour tous les éléments
