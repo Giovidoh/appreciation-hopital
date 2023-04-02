@@ -1,11 +1,14 @@
 <?php
     if(isset($_POST['send'])){
-        extract($_POST);
+        $appreciation = $_POST['appreciation'];
+        $commentaire = trim(addslashes($_POST['comment']));
+        $nom = trim(addslashes($_POST['nom']));
+        $contact = (int)$_POST['contact'];
         if($appreciation===""){
             $message = "Veuillez-sélectionner une observation !";
         }else{
             $sql = "INSERT INTO observation
-                VALUES(NULL, 0, \"$appreciation\");";
+                VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact');";
             $resultat = mysqli_query($connexion, $sql);
             if($resultat){
                 $message = "Votre observation a été soumise !";

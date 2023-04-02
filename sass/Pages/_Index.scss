@@ -1,6 +1,35 @@
-.page-title{
-    text-align: center;
-    font-family: 'Inter', sans-serif;
+.container{
+    padding-top: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        &__heading{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: opacify-color($pure-white, 0.4);
+            width: 100%;
+            padding: 10px;
+                &__pharmacy{
+                    font-family: 'Inter', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-shadow: 2px 2px 3px $color-secondary-1;
+                    margin-bottom: 5px;
+                }
+            
+                &__wish{
+                    font-family: 'Inter', sans-serif;
+                    font-size: 18px;
+                }
+        }
+
+        &__question{
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
 }
 
 #appreciation{
@@ -21,7 +50,7 @@
             display: grid;
             grid-template-columns: repeat(2, 100px);
             justify-content: center;
-            gap: 15px;
+            gap: 25px;
         }
 
         &__item{
@@ -29,8 +58,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-            height: 100px;
-            width: 100px;
+            height: 105px;
+            width: 105px;
             border: 1px solid $pure-black;
             border-radius: 10px;
             box-shadow: inset 5px 5px 10px opacify-color($pure-black, 0.1),
@@ -39,6 +68,10 @@
             cursor: pointer;
                 &.active{
                     border: 1px solid $color-secondary-2;
+                    background-color: $color-secondary-2;
+                    box-shadow: inset 5px 5px 10px opacify-color($pure-black, 0.2),
+                        inset -5px -5px 10px opacify-color($pure-white, 0.3),
+                        1px 1px 2px opacify-color($pure-black, 0.3);
                 }
 
                 img{
@@ -47,6 +80,74 @@
         
                 label{
                     pointer-events: none;
+                    text-align: center;
+                }
+        }
+
+        &__feedback{
+            margin-top: 30px;
+            width: 300px;
+                &__heading{
+                    margin-top: 30px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                td{
+                    display: flex;
+                }
+
+                &__comment{
+                    
+                        // label{
+                            
+                        // }
+            
+                        textarea{
+                            resize: none;
+                            outline: none;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 15px;
+                            height: 80px;
+                            padding: 5px;
+                            border: none;
+                            border-radius: 5px;
+                            width: 100%;
+                        }
+                }
+
+                &__name{
+
+                        // label{
+                            
+                        // }
+
+                        input{
+                            width: 100%;
+                            outline: none;
+                            padding: 5px;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 15px;
+                            border: none;
+                            border-radius: 5px;
+                        }
+                }
+
+                &__contact{
+                    
+                        // label{
+                            
+                        // }
+
+                        input{
+                            width: 100%;
+                            outline: none;
+                            padding: 5px;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 15px;
+                            border: none;
+                            border-radius: 5px;
+                        }
                 }
         }
 
