@@ -13,6 +13,12 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   padding-top: 20px;
   height: 100%;
@@ -43,6 +49,7 @@ body {
 .container__question {
   text-align: center;
   font-family: "Inter", sans-serif;
+  margin: 20px 10px;
 }
 
 #appreciation {
@@ -112,6 +119,7 @@ body {
   border: none;
   border-radius: 5px;
   width: 100%;
+  background-color: #E8E8FF;
 }
 .emoji-box__feedback__name input {
   width: 100%;
@@ -121,6 +129,7 @@ body {
   font-size: 15px;
   border: none;
   border-radius: 5px;
+  background-color: #E8E8FF;
 }
 .emoji-box__feedback__contact input {
   width: 100%;
@@ -130,6 +139,7 @@ body {
   font-size: 15px;
   border: none;
   border-radius: 5px;
+  background-color: #E8E8FF;
 }
 .emoji-box__submit {
   margin: 30px 0px;
