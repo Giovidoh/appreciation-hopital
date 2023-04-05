@@ -21,6 +21,19 @@
 <body>
 
     <div class="container">
+        
+        <?php
+            if(isset($message) && isset($type)):
+        ?>
+            <p class="failure-success-message <?= $type; ?>">
+                <?php
+                    echo $message;
+                ?>
+            </p>
+        <?php
+            endif;
+        ?>
+
         <div class="container__heading">
             <span class="container__heading__pharmacy">LA PHARMACIE &laquo;BOULEVARD&raquo;</span>
             <span class="container__heading__wish">vous souhaite <b>bonne guérison !</b></span>

@@ -1,9 +1,6 @@
 html, body {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 body {
@@ -11,12 +8,37 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.failure-success-message {
+  align-self: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  width: 100%;
+  padding: 15px 0px;
+  margin: 10px 0;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.failure {
+  border: 1px solid #dc142f;
+  background-color: rgba(220, 20, 47, 0.3);
+}
+
+.success {
+  border: 1px solid #0AD2A2;
+  background-color: rgba(10, 210, 162, 0.3);
 }
 
 .container {
@@ -246,6 +268,36 @@ body {
 }
 .emoji-box2__submit:active {
   background-color: #08a17c;
+}
+
+.remerciement-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanks-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 250px;
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.9), 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #E8E8FF;
+}
+.thanks-box__icon {
+  height: 100px;
+  width: 100px;
+}
+.thanks-box__message {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

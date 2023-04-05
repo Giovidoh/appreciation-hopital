@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 02 avr. 2023 à 14:45
+-- Généré le : jeu. 06 avr. 2023 à 01:39
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -29,26 +29,33 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `observation` (
   `NumObs` int(11) NOT NULL,
-  `NoteObs` smallint(2) NOT NULL,
-  `AppreciationObs` text DEFAULT NULL
+  `AppreciationObs` text DEFAULT NULL,
+  `CommentaireObs` varchar(255) DEFAULT NULL,
+  `NomObs` varchar(60) DEFAULT NULL,
+  `ContactObs` int(8) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `utilisateur`
+--
+
+CREATE TABLE `utilisateur` (
+  `NumUt` smallint(3) NOT NULL,
+  `NomUt` varchar(30) NOT NULL,
+  `PrenomUt` varchar(40) NOT NULL,
+  `IdentifiantUt` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `MdpUt` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `TypeUt` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Déchargement des données de la table `observation`
+-- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `observation` (`NumObs`, `NoteObs`, `AppreciationObs`) VALUES
-(1, 18, 'Très-bien'),
-(2, 18, 'Très-bien'),
-(3, 18, 'Très-bien'),
-(4, 10, 'Neutre'),
-(5, 10, 'Neutre'),
-(6, 12, 'Neutre'),
-(7, 0, ''),
-(8, 12, 'Neutre'),
-(9, 0, ''),
-(10, 0, 'Neutre'),
-(11, 0, 'Assez-bien');
+INSERT INTO `utilisateur` (`NumUt`, `NomUt`, `PrenomUt`, `IdentifiantUt`, `MdpUt`, `TypeUt`) VALUES
+(1, 'admin', 'admin', 'admin', 'admin', 'admin');
 
 --
 -- Index pour les tables déchargées
@@ -61,6 +68,12 @@ ALTER TABLE `observation`
   ADD PRIMARY KEY (`NumObs`);
 
 --
+-- Index pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`NumUt`);
+
+--
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
@@ -68,7 +81,13 @@ ALTER TABLE `observation`
 -- AUTO_INCREMENT pour la table `observation`
 --
 ALTER TABLE `observation`
-  MODIFY `NumObs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `NumObs` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  MODIFY `NumUt` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

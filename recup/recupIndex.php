@@ -11,9 +11,10 @@
                 VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact');";
             $resultat = mysqli_query($connexion, $sql);
             if($resultat){
-                $message = "Votre observation a été soumise !";
+                header("Location:remerciement.html");
             }else{
-                $message = "La soumission de l'observation a échoué !";
+                $message = "La soumission de l'observation a échoué ! Veuillez réessayer s'il vous plaît !";
+                $type = "failure";
             }
         }
 
