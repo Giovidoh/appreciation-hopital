@@ -1,3 +1,8 @@
+<!-- FUSEAU HORAIRE -->
+<?php
+    date_default_timezone_set("UTC");
+?>
+
 <!-- CONNEXION À LA BDD -->
 <?php
     include("php-partials/connectionDB.php");
@@ -19,6 +24,13 @@
     <title>Première solution</title>
 </head>
 <body>
+    <?php
+        $sql = "SELECT NomCentre, Libelle1, Libelle2
+                FROM parametres;";
+        $resultat = mysqli_query($connexion, $sql);
+        $row = mysqli_fetch_assoc($resultat);
+        if($row):
+    ?>
 
     <div class="container">
         
@@ -35,10 +47,14 @@
         ?>
 
         <div class="container__heading">
-            <span class="container__heading__pharmacy">LA PHARMACIE &laquo;BOULEVARD&raquo;</span>
+            <span class="container__heading__pharmacy">LA PHARMACIE &laquo;<?php echo $row['NomCentre']?>&raquo;</span>
             <span class="container__heading__wish">vous souhaite <b>bonne guérison !</b></span>
         </div>
-        <h3 class="container__question">Comment avez vous trouvé notre service ? </h3>
+
+        <img class="blob blob__1" src="images/blob1.svg" alt="premier blob">
+        <img class="blob blob__2" src="images/blob2.svg" alt="deuxième blob">
+
+        <h3 class="container__question"> <?php echo $row['Libelle1']?> </h3>
         <form class="emoji-box" method="POST" autocomplete="off">
             <input id="appreciation" name="appreciation" type="text" value="">
             <div class="emoji-box__items">
@@ -63,7 +79,7 @@
                 </div>
             </div>
 
-            <span class="emoji-box__feedback__heading">Vous pouvez nous laisser un commentaire pour l'amélioration continue du service (Ce n'est pas obligatoire)</span>
+            <span class="emoji-box__feedback__heading"> <?php echo $row['Libelle2']?> </span>
 
             <table class="emoji-box__feedback">
                 
@@ -79,13 +95,22 @@
 
                 <tr class="emoji-box__feedback__contact">
                     <td><label for="">Votre contact</label></td>
-                    <td><input name="contact" type="text"></td>
+                    <td><input name="contact" id="contact" type="text"></td>
+                </tr>
+
+                <tr>
+                    <td id="erreurContact" style="display: none; color: crimson;">
+                        Seuls les touches entre 0 et 9 sont autorisées !
+                    </td>
                 </tr>
             </table>
 
             <input type="submit" name="send" class="emoji-box__submit" value="Envoyer">
         </form>
     </div>
+    <?php
+        endif;
+    ?>
 
     <script src="js/index.js"></script>
 </body>

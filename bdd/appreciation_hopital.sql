@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 15 avr. 2023 à 12:58
+-- Généré le : mer. 19 avr. 2023 à 02:07
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -32,8 +32,28 @@ CREATE TABLE `observation` (
   `AppreciationObs` text DEFAULT NULL,
   `CommentaireObs` varchar(255) DEFAULT NULL,
   `NomObs` varchar(60) DEFAULT NULL,
-  `ContactObs` int(8) DEFAULT NULL
+  `ContactObs` int(8) DEFAULT NULL,
+  `DateObs` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `parametres`
+--
+
+CREATE TABLE `parametres` (
+  `NomCentre` varchar(100) NOT NULL,
+  `Libelle1` varchar(255) NOT NULL,
+  `Libelle2` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `parametres`
+--
+
+INSERT INTO `parametres` (`NomCentre`, `Libelle1`, `Libelle2`) VALUES
+('BOULEVARD', 'Comment avez vous trouvé notre service ?', 'Vous pouvez nous laisser un commentaire pour l\'amélioration continue du service (Ce n\'est pas obligatoire)');
 
 -- --------------------------------------------------------
 

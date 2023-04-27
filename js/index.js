@@ -20,3 +20,23 @@ tableauAppreciations.forEach(appreciation => {
 
     })
 })
+
+//Contrôler le champ du numéro de téléphone
+const champContact = document.getElementById("contact");
+const erreurContact = document.getElementById("erreurContact");
+
+champContact.addEventListener("keydown", (e) => {
+    const key = e.key;
+    
+    //Vérifier si la touche est numérique ou "supprimer" ou "delete"
+    if((key >= "0" && key <= "9") || key === "Backspace" || key === "Delete"){
+        //Ne rien faire
+        erreurContact.style.display = "none";
+        return true;
+    }else{
+        //Empêcher l'entrée des caractères non autorisés
+        e.preventDefault();
+        erreurContact.style.display = "block";
+        return false;
+    }
+})

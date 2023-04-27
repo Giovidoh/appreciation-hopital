@@ -1,5 +1,5 @@
 .container{
-    padding-top: 20px;
+    padding-top: 0px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -9,27 +9,44 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: opacify-color($pure-white, 0.4);
+            background-color: opacify-color($color-primary, 1);
             width: 100%;
             padding: 10px;
                 &__pharmacy{
                     font-family: 'Inter', sans-serif;
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: bold;
+                    text-align: center;
                     text-shadow: 2px 2px 3px $color-secondary-1;
                     margin-bottom: 5px;
                 }
             
                 &__wish{
                     font-family: 'Inter', sans-serif;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
         }
 
         &__question{
             text-align: center;
             font-family: 'Inter', sans-serif;
+            font-size: 14px;
             margin: 20px 10px;
+        }
+}
+
+.blob{
+    position: absolute;
+    height: 400px;
+    z-index: -1;
+        &__1{
+            top: -10%;
+            left: -50%;
+        }
+
+        &__2{
+            top: 40%;
+            left: 0;
         }
 }
 
@@ -51,7 +68,7 @@
             display: grid;
             grid-template-columns: repeat(2, 100px);
             justify-content: center;
-            gap: 25px;
+            gap: 10px;
         }
 
         &__item{
@@ -69,6 +86,7 @@
             cursor: pointer;
                 &.active{
                     border: 1px solid $color-secondary-2;
+                    color: $pure-white;
                     background-color: $color-secondary-2;
                     box-shadow: inset 5px 5px 10px opacify-color($pure-black, 0.2),
                         inset -5px -5px 10px opacify-color($pure-white, 0.3),
@@ -76,26 +94,29 @@
                 }
 
                 img{
-                    height: 50px;
+                    height: 40px;
                 }
         
                 label{
                     pointer-events: none;
                     text-align: center;
+                    font-size: 14px;
                 }
         }
 
         &__feedback{
             margin-top: 30px;
-            width: 300px;
+            width: 80%;
                 &__heading{
                     margin-top: 30px;
                     text-align: center;
                     font-weight: bold;
+                    font-size: 14px;
                 }
 
                 td{
                     display: flex;
+                    padding-top: 5px;
                 }
 
                 &__comment{
@@ -115,6 +136,8 @@
                             border-radius: 5px;
                             width: 100%;
                             background-color: $color-secondary-1;
+                            border: 1px solid $pure-black;
+                            box-shadow: 2px 2px 5px opacify-color($pure-black, 0.3);
                         }
                 }
 
@@ -133,6 +156,8 @@
                             border: none;
                             border-radius: 5px;
                             background-color: $color-secondary-1;
+                            border: 1px solid $pure-black;
+                            box-shadow: 2px 2px 5px opacify-color($pure-black, 0.3);
                         }
                 }
 
@@ -151,23 +176,29 @@
                             border: none;
                             border-radius: 5px;
                             background-color: $color-secondary-1;
+                            border: 1px solid $pure-black;
+                            box-shadow: 2px 2px 5px opacify-color($pure-black, 0.3);
                         }
                 }
         }
 
         &__submit{
+            width: 80%;
             margin: 30px 0px;
             border: 1px solid $pure-black;
             box-shadow: 2px 2px 5px opacify-color($pure-black, 0.3);
             border-radius: 5px;
             font-family: 'Inter', sans-serif;
+            font-size: 18px;
             font-weight: bold;
+            text-transform: uppercase;
             letter-spacing: 1px;
             padding: 7px 20px;
-            background-color: $color-primary;
+            color: $pure-white;
+            background-color: $color-secondary-2;
             cursor: pointer;
                 &:active{
-                    background-color: darken-color($color-primary, 10%);
+                    background-color: darken-color($color-secondary-2, 10%);
                 }
             }
     

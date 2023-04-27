@@ -2,7 +2,7 @@
     $serveur = "localhost";
     $user = "root";
     $password = "";
-    $dbname = "appreciation_hopital";
+    $dbname = "appreciation_hopital_test";
 
     $connexion = mysqli_connect($serveur, $user, $password, $dbname);
     if($connexion){

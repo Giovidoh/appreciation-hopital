@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  background-color: #0AD2A2;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,12 +37,12 @@ body {
 }
 
 .success {
-  border: 1px solid #0AD2A2;
-  background-color: rgba(10, 210, 162, 0.3);
+  border: 1px solid #4DF4F7;
+  background-color: rgba(77, 244, 247, 0.3);
 }
 
 .container {
-  padding-top: 20px;
+  padding-top: 0px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -53,25 +53,41 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #4df4f7;
   width: 100%;
   padding: 10px;
 }
 .container__heading__pharmacy {
   font-family: "Inter", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  text-align: center;
   text-shadow: 2px 2px 3px #E8E8FF;
   margin-bottom: 5px;
 }
 .container__heading__wish {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 .container__question {
   text-align: center;
   font-family: "Inter", sans-serif;
+  font-size: 14px;
   margin: 20px 10px;
+}
+
+.blob {
+  position: absolute;
+  height: 400px;
+  z-index: -1;
+}
+.blob__1 {
+  top: -10%;
+  left: -50%;
+}
+.blob__2 {
+  top: 40%;
+  left: 0;
 }
 
 #appreciation {
@@ -93,7 +109,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 100px);
   justify-content: center;
-  gap: 25px;
+  gap: 10px;
 }
 .emoji-box__item {
   display: flex;
@@ -108,28 +124,32 @@ body {
   cursor: pointer;
 }
 .emoji-box__item.active {
-  border: 1px solid #4282d6;
-  background-color: #4282d6;
+  border: 1px solid #66d1d3;
+  color: #FFFFFF;
+  background-color: #66d1d3;
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.3), 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .emoji-box__item img {
-  height: 50px;
+  height: 40px;
 }
 .emoji-box__item label {
   pointer-events: none;
   text-align: center;
+  font-size: 14px;
 }
 .emoji-box__feedback {
   margin-top: 30px;
-  width: 300px;
+  width: 80%;
 }
 .emoji-box__feedback__heading {
   margin-top: 30px;
   text-align: center;
   font-weight: bold;
+  font-size: 14px;
 }
 .emoji-box__feedback td {
   display: flex;
+  padding-top: 5px;
 }
 .emoji-box__feedback__comment textarea {
   resize: none;
@@ -142,6 +162,8 @@ body {
   border-radius: 5px;
   width: 100%;
   background-color: #E8E8FF;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .emoji-box__feedback__name input {
   width: 100%;
@@ -152,6 +174,8 @@ body {
   border: none;
   border-radius: 5px;
   background-color: #E8E8FF;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .emoji-box__feedback__contact input {
   width: 100%;
@@ -162,21 +186,27 @@ body {
   border: none;
   border-radius: 5px;
   background-color: #E8E8FF;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .emoji-box__submit {
+  width: 80%;
   margin: 30px 0px;
   border: 1px solid #000000;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: bold;
+  text-transform: uppercase;
   letter-spacing: 1px;
   padding: 7px 20px;
-  background-color: #0AD2A2;
+  color: #FFFFFF;
+  background-color: #66d1d3;
   cursor: pointer;
 }
 .emoji-box__submit:active {
-  background-color: #08a17c;
+  background-color: #3ec5c8;
 }
 
 .page2-title {
@@ -244,13 +274,13 @@ body {
   height: 8px;
   background-color: #FFFFFF;
   border-radius: 50%;
-  border: 1px solid #245da7;
-  box-shadow: -1003px 0 0 1000px #4282d6;
+  border: 1px solid #35b5b8;
+  box-shadow: -1003px 0 0 1000px #66d1d3;
   cursor: pointer;
 }
 .emoji-box2__rangeValue {
   padding: 3px 15px;
-  background-color: #4282d6;
+  background-color: #66d1d3;
   color: #FFFFFF;
   border-radius: 15px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -2px -2px 2px rgba(255, 255, 255, 0.2);
@@ -263,11 +293,11 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   padding: 7px 20px;
-  background-color: #0AD2A2;
+  background-color: #4DF4F7;
   cursor: pointer;
 }
 .emoji-box2__submit:active {
-  background-color: #08a17c;
+  background-color: #1cf1f5;
 }
 
 .remerciement-container {

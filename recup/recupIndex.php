@@ -6,9 +6,11 @@
         $contact = (int)$_POST['contact'];
         if($appreciation===""){
             $message = "Veuillez-sélectionner une observation !";
+            $type = "failure";
         }else{
+            $currenteDate = date("Y-m-d", time());
             $sql = "INSERT INTO observation
-                VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact');";
+                VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact', '$currenteDate');";
             $resultat = mysqli_query($connexion, $sql);
             if($resultat){
                 header("Location:remerciement.html");
