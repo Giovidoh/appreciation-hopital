@@ -4,6 +4,8 @@ html, body{
 }
 
 body{
+    position: relative;
+    overflow-x: hidden;
     background-color: $pure-white;
     margin: 0;
     padding: 0;

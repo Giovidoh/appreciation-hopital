@@ -4,6 +4,8 @@ html, body {
 }
 
 body {
+  position: relative;
+  overflow-x: hidden;
   background-color: #FFFFFF;
   margin: 0;
   padding: 0;
@@ -78,16 +80,17 @@ body {
 
 .blob {
   position: absolute;
-  height: 400px;
   z-index: -1;
 }
 .blob__1 {
   top: -10%;
   left: -50%;
+  height: 50%;
 }
 .blob__2 {
   top: 40%;
-  left: 0;
+  right: 0;
+  height: 40%;
 }
 
 #appreciation {
@@ -139,7 +142,7 @@ body {
 }
 .emoji-box__feedback {
   margin-top: 30px;
-  width: 80%;
+  width: 90%;
 }
 .emoji-box__feedback__heading {
   margin-top: 30px;
@@ -190,7 +193,7 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 .emoji-box__submit {
-  width: 80%;
+  width: 90%;
   margin: 30px 0px;
   border: 1px solid #000000;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);

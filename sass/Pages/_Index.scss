@@ -37,16 +37,17 @@
 
 .blob{
     position: absolute;
-    height: 400px;
     z-index: -1;
         &__1{
             top: -10%;
             left: -50%;
+            height: 50%;
         }
 
         &__2{
             top: 40%;
-            left: 0;
+            right: 0;
+            height: 40%;
         }
 }
 
@@ -106,7 +107,7 @@
 
         &__feedback{
             margin-top: 30px;
-            width: 80%;
+            width: 90%;
                 &__heading{
                     margin-top: 30px;
                     text-align: center;
@@ -183,7 +184,7 @@
         }
 
         &__submit{
-            width: 80%;
+            width: 90%;
             margin: 30px 0px;
             border: 1px solid $pure-black;
             box-shadow: 2px 2px 5px opacify-color($pure-black, 0.3);
