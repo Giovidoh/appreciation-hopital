@@ -10,7 +10,7 @@
         }else{
             $currenteDate = date("Y-m-d", time());
             $sql = "INSERT INTO observation
-                VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact', '$currenteDate');";
+                    VALUES(NULL, '$appreciation', '$commentaire', '$nom', '$contact', '$currenteDate');";
             $resultat = mysqli_query($connexion, $sql);
             if($resultat){
                 header("Location:remerciement.html");

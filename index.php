@@ -81,7 +81,9 @@
 
             <span class="emoji-box__feedback__heading"> <?php echo $row['Libelle2']?> </span>
 
-            <table class="emoji-box__feedback">
+            <button id="commentBtn" class="emoji-box__feedback__comment-btn" type="button">Laisser un commentaire</button>
+
+            <table id="commentTable" class="emoji-box__feedback">
                 
                 <tr class="emoji-box__feedback__comment">
                     <td><label for="">Commentaire</label></td>

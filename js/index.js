@@ -21,6 +21,14 @@ tableauAppreciations.forEach(appreciation => {
     })
 })
 
+//Afficher la partie commentaire au clique du bouton d'ajout de commentaire
+const commentButton = document.getElementById("commentBtn");
+const commentTable = document.getElementById("commentTable");
+
+commentButton.addEventListener("click", function(){
+    commentTable.classList.add("active");
+})
+
 //Contrôler le champ du numéro de téléphone
 const champContact = document.getElementById("contact");
 const erreurContact = document.getElementById("erreurContact");
