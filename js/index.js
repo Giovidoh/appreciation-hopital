@@ -26,7 +26,7 @@ const commentButton = document.getElementById("commentBtn");
 const commentTable = document.getElementById("commentTable");
 
 commentButton.addEventListener("click", function(){
-    commentTable.classList.add("active");
+    commentTable.classList.toggle("active");
 })
 
 //Contrôler le champ du numéro de téléphone
